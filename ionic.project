@@ -1,0 +1,12 @@
+{
+  "name": "MyPol",
+  "app_id": "286a4617",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

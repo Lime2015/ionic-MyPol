@@ -1,0 +1,8 @@
+/* Empty. Add your own CSS if you like */
+
+.button.button-kakao {
+border-color: transparent;
+background-color: #fdeb1d;
+color: #433; }
+.button.button-kakao.active, .button.button-kakao.activated {
+background-color: #ffe300; }
