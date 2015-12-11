@@ -9,6 +9,7 @@
     <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -18,17 +19,85 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
-  </head>
-  <body ng-app="home" ng-controller="LoginCtrl">
 
-    <div class="col col-80 col-offset-10">
-      <button class="button button-full icon-left ion-chatbubble-working button-kakao">
+    <!-- kakao sdk -->
+    <!-- <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/spin.min.js" type="text/javascript"></script>
+    <script src="js/jquery.watermark.min.js" type="text/javascript"></script>
+    <script src="js/weblogin.js" type="text/javascript"></script> -->
+
+  </head>
+  <body ng-app="home" ng-controller="PopupLoginCtrl">
+
+    <!-- <div class="col col-50 col-offset-25"> -->
+      <!-- <button class="button button-full icon-left ion-chatbubble-working button-kakao">
         카카오계정으로 로그인
-      </button>
-        <button class="button button-full icon-left ion-eye button-positive">
-          둘러보기
-        </button>
+      </button> -->
+      <p align="center">
+          <!-- <a id="kakao-login-btn"></a>
+
+            <script>
+              // 사용할 앱의 JavaScript 키를 설정해 주세요.
+              Kakao.init('81bd09553dfa596110d97ef5cdfed7b9');
+
+              // 카카오 로그인 버튼을 생성합니다.
+              Kakao.Auth.createLoginButton({
+                container: '#kakao-login-btn',
+                success: function(authObj) {
+                  alert(JSON.stringify(authObj));
+                },
+                fail: function(err) {
+                  alert(JSON.stringify(err))
+                }
+              });
+            </script> -->
+
+            <!-- <a href="kakao-login.html" class="button ion-chatbubble-working button-kakao" style="width:222px;">
+                &nbsp;&nbsp;카카오계정으로 로그인
+            </a> -->
+
+            <button class="button ion-chatbubble-working button-kakao" style="width:222px;" ng-click="showPopup()">
+              &nbsp;&nbsp;카카오계정으로 로그인
+            </button>
+
+            <!-- <button class="button ion-chatbubble-working button-kakao" style="width:222px;">
+              &nbsp;&nbsp;카카오계정으로 로그인
+            </button> -->
+        </p>
+        <p align="center">
+          <button class="button ion-eye button-positive" style="width:222px;">
+            &nbsp;&nbsp;둘러보기
+          </button>
+        </p>
+  <!-- </div> -->
+
+
+  <div class="list card animated bounceInLeft">
+    <div class="item item-divider">Recent Updates</div>
+    <div class="item item-body">
+      <div>
+        There is a fire in <b>sector 3</b>
+      </div>
+    </div>
   </div>
+  <div class="list card animated bounceInRight">
+    <div class="item item-divider">Health</div>
+    <div class="item item-body">
+      <div>
+        You ate an apple today!
+      </div>
+    </div>
+  </div>
+  <div class="list card animated infinite tada">
+    <div class="item item-divider">Upcoming</div>
+    <div class="item item-body">
+      <div>
+        You have <b>29</b> meetings on your calendar tomorrow.
+      </div>
+    </div>
+  </div>
+
 
   </body>
 </html>

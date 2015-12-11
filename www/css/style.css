@@ -6,3 +6,9 @@ background-color: #fdeb1d;
 color: #433; }
 .button.button-kakao.active, .button.button-kakao.activated {
 background-color: #ffe300; }
+
+.popup {
+width: 80% !important;
+height: 80% !important;
+background: rgba(255, 255, 255, 1) !important;
+}
