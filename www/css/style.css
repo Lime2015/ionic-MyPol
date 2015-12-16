@@ -12,3 +12,12 @@ width: 80% !important;
 height: 80% !important;
 background: rgba(255, 255, 255, 1) !important;
 }
+
+.intro {
+    position: absolute;
+    /*width: 200px;
+    height: 150px;*/
+    margin: -70px 0 0 -111px;
+    top: 50%;
+    left: 50%;
+}
