@@ -30,7 +30,10 @@
   </head>
   <body ng-app="home" ng-controller="PopupLoginCtrl">
 
-    <!-- <div class="col col-50 col-offset-25"> -->
+    <ion-view>
+      <ion-content class= 'padding has-subheader'>
+        <iframe class= 'webPage' name= "eventsPage" src="http://52.69.102.82/redmine/">
+       </iframe>
       <!-- <button class="button button-full icon-left ion-chatbubble-working button-kakao">
         카카오계정으로 로그인
       </button> -->
@@ -54,7 +57,11 @@
               });
             </script> -->
 
-            <a href="kakao-login.html" class="button ion-chatbubble-working button-kakao" style="width:222px;">
+            <!-- <a href="kakao-login.html" class="button ion-chatbubble-working button-kakao" style="width:222px;">
+                &#xA0;&#xA0;카카오계정 로그인
+            </a> -->
+
+            <a href="http://localhost:3000/login" class="button ion-chatbubble-working button-kakao" style="width:222px;">
                 &#xA0;&#xA0;카카오계정 로그인
             </a>
 
@@ -98,7 +105,6 @@
       </div>
     </div>
   </div> -->
-
 
   </body>
 </html>
