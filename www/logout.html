@@ -1,0 +1,20 @@
+<html>
+
+
+<head>
+   <script src='https://developers.kakao.com/sdk/js/kakao.min.js'></script>
+   <script>
+   Kakao.init('81bd09553dfa596110d97ef5cdfed7b9'); //카카오에서 제공 myceo.co.kr 수정
+   Kakao.Auth.logout(
+   function(obj) {
+   if(obj==true){}else{}
+    location.href='index.html';
+    }
+   );
+   </script>
+</head>
+<body>
+   자동 로그아웃.......
+</body>
+
+</html>
