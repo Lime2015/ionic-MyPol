@@ -30,10 +30,10 @@
   </head>
   <body ng-app="home" ng-controller="PopupLoginCtrl">
 
-    <ion-view>
+    <!-- <ion-view>
       <ion-content class= 'padding has-subheader'>
         <iframe class= 'webPage' name= "eventsPage" src="http://52.69.102.82/redmine/">
-       </iframe>
+       </iframe> -->
       <!-- <button class="button button-full icon-left ion-chatbubble-working button-kakao">
         카카오계정으로 로그인
       </button> -->
@@ -61,17 +61,22 @@
                 &#xA0;&#xA0;카카오계정 로그인
             </a> -->
 
-            <a href="http://localhost:3000/login" class="button ion-chatbubble-working button-kakao" style="width:222px;">
+            <!-- <a href="http://localhost:3000/login" class="button ion-chatbubble-working button-kakao" style="width:222px;">
                 &#xA0;&#xA0;카카오계정 로그인
-            </a>
+            </a> -->
 
             <!-- <button class="button ion-chatbubble-working button-kakao" style="width:222px;" ng-click="showPopup()">
-              &nbsp;&nbsp;카카오계정으로 로그인
+              &nbsp;&nbsp;카카오계정 로그인
             </button> -->
 
             <!-- <button class="button ion-chatbubble-working button-kakao" style="width:222px;">
-              &nbsp;&nbsp;카카오계정으로 로그인
+              &nbsp;&nbsp;카카오계정 로그인
             </button> -->
+
+            <a href="#" class="button ion-chatbubble-working button-kakao" style="width:222px;" ng-click="kakaoLogin()">
+               &nbsp;&nbsp;카카오계정 로그인
+            </a>
+
         </p>
         <p align="center">
           <button class="button ion-eye button-positive" style="width:222px;">
