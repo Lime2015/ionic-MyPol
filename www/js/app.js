@@ -52,38 +52,46 @@ exampleApp.controller('LoginController', function($scope, $http, $location) {
     $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
     $scope.login = function() {
-        var ref = window.open('https://kauth.kakao.com/oauth/authorize?client_id=' + clientId + '&redirect_uri=' + redirectUrl + '&response_type=code', '_blank', 'location=no');
-        ref.addEventListener('loadstart', function(event) {
-           alert("error: " + event.url);
-            if((event.url).startsWith(redirectUrl)) {
-                requestToken = (event.url).split("code=")[1];
-                $http({method: "post", url: "https://kauth.kakao.com/oauth/token", data: "client_id=" + clientId + "&redirect_uri=" + redirectUrl + "&grant_type=authorization_code&code=" + requestToken })
-                    .success(function(data) {
-                        accessToken = data.access_token;
-                        $location.path("/secure");
-                    })
-                    .error(function(data, status) {
-                        alert("error: " + data);
-                    });
-                ref.close();
-            }
-        });
+        var ref = window.open('http://192.168.0.7:3000/login.html', '_self', 'location=no');
+      //   ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+      //   ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+      //   ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+      //   ref.addEventListener('exit', function(event) { alert(event.type); });
+
+
+      //   ref.addEventListener('loadstart', function(event) {
+      //       if((event.url).startsWith(redirectUrl)) {
+      //           requestToken = (event.url).split("code=")[1];
+      //          alert("requestToken: " + requestToken);
+      //           $http({method: "post", url: "https://kauth.kakao.com/oauth/token", data: "client_id=" + clientId + "&redirect_uri=" + redirectUrl + "&grant_type=authorization_code&code=" + requestToken })
+      //               .success(function(data) {
+      //                   accessToken = data.access_token;
+      //                   $location.path("secure.html");
+      //               })
+      //               .error(function(data, status) {
+      //                   alert("error: " + data);
+      //               });
+      //           ref.close();
+      //       }
+      //   });
     }
 
-    if (typeof String.prototype.startsWith != 'function') {
-        String.prototype.startsWith = function (str){
-            return this.indexOf(str) == 0;
-        };
-    }
+   //  if (typeof String.prototype.startsWith != 'function') {
+   //      String.prototype.startsWith = function (str){
+   //          return this.indexOf(str) == 0;
+   //      };
+   //  }
 
     $scope.logout = function() {
-      Kakao.init('81bd09553dfa596110d97ef5cdfed7b9'); //카카오에서 제공 myceo.co.kr 수정
-      Kakao.Auth.logout(
-      function(obj) {
-      if(obj==true){}else{}
-       location.href='index.html';
-       }
-      );
+      var ref = window.open('http://192.168.0.7:3000/logout.html', '_self', 'location=no');
+      // Kakao.init('81bd09553dfa596110d97ef5cdfed7b9'); //카카오에서 제공 myceo.co.kr 수정
+      // alert("try logout");
+      // Kakao.Auth.logout(
+      // function(obj) {
+      // if(obj==true){alert("logout success");}else{alert("logout fail");}
+      //  location.href='index.html';
+      //  }
+      // );
    }
 });
 
