@@ -51,12 +51,12 @@ exampleApp.controller('LoginController', function($scope, $http, $location) {
 
     $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
-    $scope.login = function() {
-        var ref = window.open('http://192.168.0.7:3000/login.html', '_self', 'location=no');
-      //   ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
-      //   ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
-      //   ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
-      //   ref.addEventListener('exit', function(event) { alert(event.type); });
+    $scope.signup = function() {
+        var ref = window.open('http://52.69.102.82:3000/index', '_self', 'location=no');
+        // ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+        // ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+        // ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+        // ref.addEventListener('exit', function(event) { alert(event.type); });
 
 
       //   ref.addEventListener('loadstart', function(event) {
@@ -82,8 +82,8 @@ exampleApp.controller('LoginController', function($scope, $http, $location) {
    //      };
    //  }
 
-    $scope.logout = function() {
-      var ref = window.open('http://192.168.0.7:3000/logout.html', '_self', 'location=no');
+    $scope.goHome = function() {
+      var ref = window.open('http://52.69.102.82:3000/kakao-logout.html', '_self', 'location=no');
       // Kakao.init('81bd09553dfa596110d97ef5cdfed7b9'); //카카오에서 제공 myceo.co.kr 수정
       // alert("try logout");
       // Kakao.Auth.logout(
