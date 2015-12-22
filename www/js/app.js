@@ -52,7 +52,7 @@ exampleApp.controller('LoginController', function($scope, $http, $location) {
     $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
     $scope.signup = function() {
-        var ref = window.open('http://52.69.102.82:3000/index', '_self', 'location=no');
+        var ref = window.open('http://52.69.102.82:3000/login', '_self', 'location=no');
         // ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
         // ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
         // ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
