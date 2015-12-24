@@ -51,7 +51,7 @@ exampleApp.controller('LoginController', function($scope, $http, $location) {
 
     $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
-    $scope.signup = function() {
+    $scope.kakaoSignup = function() {
         var ref = window.open('http://52.69.102.82:3000/login', '_self', 'location=no');
         // ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
         // ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
@@ -81,9 +81,12 @@ exampleApp.controller('LoginController', function($scope, $http, $location) {
    //          return this.indexOf(str) == 0;
    //      };
    //  }
-
-    $scope.goHome = function() {
+    $scope.facebookSignup = function() {
+           var ref = window.open('http://52.69.102.82:3000/auth/facebook', '_self', 'location=no');
+    }
+    $scope.guestSignup = function() {
       var ref = window.open('http://52.69.102.82:3000/kakao-logout.html', '_self', 'location=no');
+      var ref2 = window.open('http://52.69.102.82:3000/logout', '_self', 'location=no');
       // Kakao.init('81bd09553dfa596110d97ef5cdfed7b9'); //카카오에서 제공 myceo.co.kr 수정
       // alert("try logout");
       // Kakao.Auth.logout(
